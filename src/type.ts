@@ -66,3 +66,14 @@ type message = {
     Visibility: string,
     Receiver?: player
 }
+
+/**
+ * Sender: Player who summon the dice.
+ * Faces: Number of face sof the dice (Example : 6, 10, etc...).
+ * ZeroIncluded: True if the dice include a face with 0. False otherwise.
+ */
+type dice = {
+    Sender: player,
+    Faces: number,
+    ZeroIncluded: boolean
+}
