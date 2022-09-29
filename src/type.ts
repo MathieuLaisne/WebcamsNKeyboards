@@ -32,7 +32,7 @@ type campaign = {
  * Main: Tokens in the middle layer. Players and visible objects, etc.
  * GM: Tokens in the hidden layer. Visible only to the GM.
  */
-type map = {
+export type map = {
     Plan: token[],
     Main: token[],
     GM: token[]
@@ -42,8 +42,8 @@ type map = {
  * Image: Image corresponding to the token.
  * Position: Optional. Position on the map.
  */
-type token = {
-    Image: MediaImage,
+export type token = {
+    Image: string,
     Position?: point2D
 }
 
