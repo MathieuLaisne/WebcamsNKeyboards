@@ -1,4 +1,4 @@
 
-type sheet = {
+export type sheet = {
     
 }

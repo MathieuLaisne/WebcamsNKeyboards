@@ -1,4 +1,4 @@
-import sheet from './character'
+import { sheet } from './character'
 
 /**
  * Name: Name of the player.
