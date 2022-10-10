@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.de_container{
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.immage_de{
+  width:100%;
+}
+
+.six_faces {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

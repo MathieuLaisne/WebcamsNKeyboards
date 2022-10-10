@@ -4,7 +4,7 @@ import { sheet } from './character'
  * Name: Name of the player.
  * Campaign: All campaigns the player is in as normal player.
  */
-type player = {
+export type player = {
     Name: string,
     Campaign: campaign[]
 }
@@ -68,14 +68,19 @@ type message = {
 }
 
 /**
- * Sender: Player who summon the dice.
  * Faces: Number of face sof the dice (Example : 6, 10, etc...).
  * ZeroIncluded: True if the dice include a face with 0. False otherwise.
- * Quantity: Number of dice of this type to be launch.
  */
 export type dice = {
-    Sender: player,
     Faces: number,
-    ZeroIncluded: boolean,
-    Quantity : number
+    ZeroIncluded: boolean
+}
+
+/**
+ * Sender: Player who summon the dice.
+ * Dices : Arrayof dices to be rolled. 
+ */
+ export type roll = {
+    Sender: player,
+    Dices : dice[]
 }

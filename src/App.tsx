@@ -1,9 +1,27 @@
 import React from 'react';
 import './App.css';
+import {Roll} from './roll'
+import { dice } from './type';
+
+const des : dice[] = [{
+  Faces: 6,
+  ZeroIncluded: false
+},
+{
+  Faces: 10,
+  ZeroIncluded: false
+}
+]
 
 function App() {
   return (
-    <Map/>
+    <Roll jet={{
+      Sender: {
+        Name: 'MisterMax',
+        Campaign: []
+      },
+      Dices: des
+    }}/>
   );
 }
 
