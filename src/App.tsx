@@ -1,21 +1,22 @@
 import React from 'react';
 import './App.css';
-import { Map } from "./map"
-import { token, map } from './type';
+import { Map } from './map'
+import { map, token } from './type'
 
-const layer: token[] = [{
-  Image: "public/logo512.png"
-}]
 
-const MapTest: map = {
-  Plan: layer,
-  Main: layer,
-  GM: layer,
+const ui:token = {
+  Image: require("./public/Assets/Token/Konva.png"),
+}
+
+const testmap:map = {
+  Plan: [ui],
+  Main: [ui],
+  GM: [ui],
 }
 
 function App() {
   return (
-    <Map ThisMap={MapTest}></Map>
+    <Map ThisMap={testmap}/>
   );
 }
 
