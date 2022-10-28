@@ -10,6 +10,10 @@ const des : dice[] = [{
 {
   Faces: 10,
   ZeroIncluded: false
+},
+{
+  Faces: 20,
+  ZeroIncluded: false
 }
 ]
 
