@@ -44,7 +44,11 @@ export type map = {
  */
 export type token = {
     Image: string,
-    Position?: point2D
+    Position?: point2D,
+}
+
+export type tokenState = {
+    image: HTMLImageElement;
 }
 
 type point2D = {
