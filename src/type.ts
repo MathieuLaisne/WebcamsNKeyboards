@@ -47,6 +47,10 @@ export type token = {
     Position?: point2D,
 }
 
+export type tokenProps = {
+    tok: token;
+}
+
 export type tokenState = {
     image: HTMLImageElement;
 }
