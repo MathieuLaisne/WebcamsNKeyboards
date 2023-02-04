@@ -5,23 +5,36 @@ import React from 'react';
 import useImage from 'use-image';
 
 export const Map = ({ ThisMap }: { ThisMap: map }) => {
-    const gm = ThisMap.GM.map((ThisToken: token) => { <Token tok={ThisToken}/>})
-    const main = ThisMap.Main.map((ThisToken:token) => { <Token tok={ThisToken}/>})
-    const plan = ThisMap.Plan.map((ThisToken:token) => { <Token tok={ThisToken}/>})
     return (
         <>
             <Layer>
-                {plan}
+                { ThisMap.Plan.map((ThisToken: token) => { return <TokenTest tok={ThisToken}/>})}
             </Layer>
             <Layer>
-                {main}
+                { ThisMap.Main.map((ThisToken: token) => { return <TokenTest tok={ThisToken}/>})}
             </Layer>
             <Layer>
-                {gm}
+                { ThisMap.GM.map((ThisToken: token) => { return <TokenTest tok={ThisToken}/>})}
             </Layer>
         </>
     );
 };
+
+const TokenTest = (props: tokenProps) => {
+    const [image] = useImage(props.tok.Image);
+    return (
+    <Image 
+        x={props.tok.Position ? props.tok.Position.x : 0}
+        y={props.tok.Position ? props.tok.Position.y : 0}
+        image={image}
+        draggable={true}
+        onDragEnd={(e) => {
+                props.tok.Position = {x: e.target.x(), y:e.target.y()};
+            }
+        }
+     />
+     );
+  };
 
 export class Token extends React.Component<tokenProps, tokenState> {
 

@@ -4,25 +4,25 @@ import { Map } from './map'
 import { map, token } from './type'
 import { Stage, Layer, Image, Text } from 'react-konva';
 
-const test1:token = {
-  Image: "./Assets/Token/Konva.png",
+const plan:token = {
+  Image: "https://media.discordapp.net/attachments/424592501714714640/1071497259654590465/image.png",
   Position: { x: 10, y: 100}
 }
 
-const test2:token = {
-  Image: "./Assets/Token/Konva.png",
+const main:token = {
+  Image: "https://konvajs.org/assets/yoda.jpg",
   Position: { x: 20, y: 100}
 }
 
-const test3:token = {
-  Image: "./Assets/Token/Konva.png",
+const gm:token = {
+  Image: "https://konvajs.org/assets/yoda.jpg",
   Position: { x: 120, y: 200}
 }
 
 const testmap:map = {
-  Plan: [test1],
-  Main: [test2],
-  GM: [test3],
+  Plan: [plan],
+  Main: [main],
+  GM: [gm],
 }
 
 function App() {
